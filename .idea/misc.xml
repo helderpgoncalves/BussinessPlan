@@ -3,6 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidStudioProjects/BussinessPlan/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1675" />
+        <entry key="..\:/AndroidStudioProjects/BussinessPlan/app/src/main/res/drawable/rounded_corners.xml" value="0.1675" />
+        <entry key="..\:/AndroidStudioProjects/BussinessPlan/app/src/main/res/drawable/search_input.xml" value="0.1675" />
+        <entry key="..\:/AndroidStudioProjects/BussinessPlan/app/src/main/res/layout/activity_formulary.xml" value="0.21784420289855072" />
+        <entry key="..\:/AndroidStudioProjects/BussinessPlan/app/src/main/res/layout/activity_login.xml" value="0.264" />
+        <entry key="..\:/AndroidStudioProjects/BussinessPlan/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/AndroidStudioProjects/BussinessPlan/app/src/main/res/layout/fragment_login.xml" value="0.21784420289855072" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.11875" />
       </map>
     </option>
