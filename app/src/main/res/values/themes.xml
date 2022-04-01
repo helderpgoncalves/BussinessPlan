@@ -23,4 +23,13 @@
         <item name="android:backgroundTint">@color/gray</item>
         <item name="android:textColor">@color/black</item>
     </style>
+
+    <style name="Theme.BussinessPlan.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.BussinessPlan.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.BussinessPlan.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
