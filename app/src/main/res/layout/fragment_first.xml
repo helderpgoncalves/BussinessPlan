@@ -165,6 +165,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
+                android:visibility="gone"
+                android:background="@drawable/search_input"/>
+
+            <Spinner
+                android:id="@+id/marchandises_ou_services_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
                 android:background="@drawable/search_input"/>
         </LinearLayout>
 

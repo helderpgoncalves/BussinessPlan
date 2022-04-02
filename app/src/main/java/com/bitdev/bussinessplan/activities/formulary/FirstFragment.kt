@@ -5,8 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import android.widget.EditText
 import androidx.core.widget.doAfterTextChanged
+import androidx.navigation.fragment.findNavController
+import com.bitdev.bussinessplan.R
 import com.bitdev.bussinessplan.databinding.FragmentFirstBinding
 
 /**
@@ -16,11 +20,13 @@ class FirstFragment : Fragment() {
 
     private var _binding: FragmentFirstBinding? = null
 
-    private var inputGroup: MutableList<EditText> = mutableListOf()
-
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
+
+    private lateinit var parent: FormularyActivity
+    private var inputGroup: MutableMap<String,EditText> = mutableMapOf()
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,31 +41,58 @@ class FirstFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        inputGroup.add(binding.prenomNom)
-        inputGroup.add(binding.intitule)
-        inputGroup.add(binding.statutJuridique)
-        inputGroup.add(binding.numeroTelephone)
-        inputGroup.add(binding.adresseEmail)
-        inputGroup.add(binding.ville)
-        inputGroup.add(binding.marchandisesOuServices)
+        parent = requireActivity() as FormularyActivity
+
+        inputGroup["nom"] = binding.prenomNom
+        inputGroup["intitule"] = binding.intitule
+        inputGroup["statut_juridique"] = binding.statutJuridique
+        inputGroup["telephone"] = binding.numeroTelephone
+        inputGroup["email"] = binding.adresseEmail
+        inputGroup["ville"] = binding.ville
+        inputGroup["type"] = binding.marchandisesOuServices
+
+
+        val spinner = binding.marchandisesOuServicesSpinner
+
+        ArrayAdapter.createFromResource(
+            view.context, R.array.type, android.R.layout.simple_spinner_item
+        ).also { adapter ->
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            spinner.adapter = adapter
+        }
+
+        spinner.onItemSelectedListener = object: AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(p: AdapterView<*>?, v: View?, pos: Int, id: Long) {
+                binding.marchandisesOuServices.setText("${p?.getItemAtPosition(pos)}")
+            }
+            override fun onNothingSelected(p0: AdapterView<*>?) {}
+        }
 
         updateButton()
 
-        for(input in inputGroup){
+        for(input in inputGroup.values){
             input.doAfterTextChanged {
                 updateButton()
             }
         }
+
+        binding.nextPageBtn.setOnClickListener {
+            nextPage()
+        }
+
+    }
+
+    private fun anyEmpty(): Boolean {
+        for(input in inputGroup.values){
+            if(input.text.toString().isEmpty()){
+                return true
+            }
+        }
+        return false
     }
 
     private fun updateButton(){
-        var isEmpty = false
-        for(input in inputGroup){
-            if(input.text.toString().isEmpty()){
-                isEmpty = true
-                break;
-            }
-        }
+        val isEmpty = anyEmpty()
 
         if(isEmpty && !binding.nextPageBtn.isEnabled) return
 
@@ -72,6 +105,16 @@ class FirstFragment : Fragment() {
             binding.nextPageBtn.alpha = 1f
             binding.nextPageBtn.isEnabled = true
         }
+    }
+
+    private fun nextPage(){
+        if(!this::parent.isInitialized || anyEmpty()) return
+
+        for(input in inputGroup){
+            parent.setData(input.key,input.value.text.toString())
+        }
+
+        findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
 
     }
 
