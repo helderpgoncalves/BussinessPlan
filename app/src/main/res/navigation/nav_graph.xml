@@ -33,5 +33,13 @@
         tools:layout="@layout/fragment_third">
 
 
+        <action
+            android:id="@+id/action_ThirdFragment_to_FourthFragment"
+            app:destination="@id/FourthFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/FourthFragment"
+        android:name="com.bitdev.bussinessplan.activities.formulary.FourthFragment"
+        android:label="fragment_fourth"
+        tools:layout="@layout/fragment_fourth" />
 </navigation>

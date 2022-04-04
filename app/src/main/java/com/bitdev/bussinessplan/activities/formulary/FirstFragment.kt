@@ -97,14 +97,23 @@ class FirstFragment : Fragment() {
         if(isEmpty && !binding.nextPageBtn.isEnabled) return
 
         if(isEmpty){
-            binding.nextPageBtn.isClickable = false
-            binding.nextPageBtn.alpha = .5f
-            binding.nextPageBtn.isEnabled = false
+            disableButton()
         }else{
-            binding.nextPageBtn.isClickable = true
-            binding.nextPageBtn.alpha = 1f
-            binding.nextPageBtn.isEnabled = true
+            enableButton()
         }
+    }
+
+
+    private fun disableButton(){
+        binding.nextPageBtn.isClickable = false
+        binding.nextPageBtn.alpha = .5f
+        binding.nextPageBtn.isEnabled = false
+    }
+
+    private fun enableButton(){
+        binding.nextPageBtn.isClickable = true
+        binding.nextPageBtn.alpha = 1f
+        binding.nextPageBtn.isEnabled = true
     }
 
     private fun nextPage(){

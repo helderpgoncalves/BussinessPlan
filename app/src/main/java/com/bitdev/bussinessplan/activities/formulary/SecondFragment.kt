@@ -58,7 +58,7 @@ class SecondFragment : Fragment() {
         inputGroup["materiel_bureau"] = binding.materielBureau
         inputGroup["stock_matieres"] = binding.stockMatieres
         inputGroup["tresorerie_depart"] = binding.tresorerieDepart
-
+        inputGroup["duree_amortissement"] = binding.dureeAmortissement
 
         update()
 
@@ -89,14 +89,35 @@ class SecondFragment : Fragment() {
             totalExpenses += input.text.toString().toDouble()
         }
 
+        binding.total.setText(totalExpenses.toString())
+
+        if(binding.dureeAmortissement.text.toString() == ""){
+            disableButton()
+        }else{
+            enableButton()
+        }
+
+    }
+
+    private fun disableButton(){
+        binding.nextPageBtn.isClickable = false
+        binding.nextPageBtn.alpha = .5f
+        binding.nextPageBtn.isEnabled = false
+    }
+
+    private fun enableButton(){
+        binding.nextPageBtn.isClickable = true
+        binding.nextPageBtn.alpha = 1f
+        binding.nextPageBtn.isEnabled = true
     }
 
     private fun nextPage(){
         if(!this::parent.isInitialized) return
 
-        parent.setData("besoins_de_demarrage",totalExpenses.toString())
+        for(input in inputGroup){
+            parent.setData(input.key,input.value.text.toString())
+        }
 
-        findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
-
+        findNavController().navigate(R.id.action_SecondFragment_to_ThirdFragment)
     }
 }
