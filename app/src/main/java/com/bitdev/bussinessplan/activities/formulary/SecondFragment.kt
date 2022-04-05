@@ -83,13 +83,13 @@ class SecondFragment : Fragment() {
         totalExpenses = 0.0
         for(input in inputGroup.values){
             if(input.text.isEmpty()) {
-                continue;
+                continue
             }
 
             totalExpenses += input.text.toString().toDouble()
         }
 
-        binding.total.setText(totalExpenses.toString())
+        binding.total.text = totalExpenses.toString()
 
         if(binding.dureeAmortissement.text.toString() == ""){
             disableButton()

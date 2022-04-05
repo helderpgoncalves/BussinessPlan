@@ -6,10 +6,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-
     <ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -24,7 +24,7 @@
                 android:textStyle="bold"
                 android:textAlignment="center"
                 android:layout_marginBottom="5dp"
-                android:text="Vos charges fixes"/>
+                android:text="Votre chiffre d'affaires de la première année"/>
 
 
             <TextView
@@ -35,8 +35,33 @@
                 android:textStyle="normal"
                 android:textAlignment="center"
                 android:layout_marginBottom="20dp"
-                android:text="Listez vos charges courantes récurrentes, en hors taxe (ou TTC si vous n'êtes pas soumis à la TVA)."/>
+                android:text="Prévoyez ici le chiffre d'affaires de votre activité (hors taxes)."/>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:text="Jours travaillés"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:inputType="numberDecimal"
+                    android:text="Affaires moyen / jour"
+                    android:textAlignment="center" />
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -49,42 +74,41 @@
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     android:textSize="18sp"
-                    android:text="Assurances"/>
+                    android:text="Mois 1"/>
 
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/jours_01"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:inputType="numberDecimal"
+                        android:background="@drawable/search_input"/>
+                    <EditText
+                        android:id="@+id/affaires_01"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:inputType="numberDecimal"
 
-                    <EditText
-                        android:id="@+id/assurances_01"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:inputType="numberDecimal"
-                        android:hint="Année 1"
-                        android:background="@drawable/search_input"/>
-                    <EditText
-                        android:id="@+id/assurances_02"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:inputType="numberDecimal"
-                        android:hint="Année 2"
-                        android:background="@drawable/search_input"/>
-                    <EditText
-                        android:id="@+id/assurances_03"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:inputType="numberDecimal"
-                        android:hint="Année 3"
                         android:background="@drawable/search_input"/>
                 </LinearLayout>
+                <TextView
+                    android:id="@+id/total_01"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:inputType="numberDecimal"
+                    android:textSize="18sp"
+                    android:textAlignment="center"
 
+                    android:background="@drawable/search_input"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -97,42 +121,41 @@
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     android:textSize="18sp"
-                    android:text="Téléphone, internet"/>
+                    android:text="Mois 2"/>
 
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/jours_02"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:inputType="numberDecimal"
+                        android:background="@drawable/search_input"/>
+                    <EditText
+                        android:id="@+id/affaires_02"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:inputType="numberDecimal"
 
-                    <EditText
-                        android:id="@+id/internet_01"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:inputType="numberDecimal"
-                        android:hint="Année 1"
-                        android:background="@drawable/search_input"/>
-                    <EditText
-                        android:id="@+id/internet_02"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:inputType="numberDecimal"
-                        android:hint="Année 2"
-                        android:background="@drawable/search_input"/>
-                    <EditText
-                        android:id="@+id/internet_03"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:inputType="numberDecimal"
-                        android:hint="Année 3"
                         android:background="@drawable/search_input"/>
                 </LinearLayout>
+                <TextView
+                    android:id="@+id/total_02"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:inputType="numberDecimal"
+                    android:textSize="18sp"
+                    android:textAlignment="center"
 
+                    android:background="@drawable/search_input"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -145,42 +168,41 @@
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     android:textSize="18sp"
-                    android:text="Autres abonnements"/>
+                    android:text="Mois 3"/>
 
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/jours_03"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:inputType="numberDecimal"
+                        android:background="@drawable/search_input"/>
+                    <EditText
+                        android:id="@+id/affaires_03"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:inputType="numberDecimal"
 
-                    <EditText
-                        android:id="@+id/abonnements_01"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:inputType="numberDecimal"
-                        android:hint="Année 1"
-                        android:background="@drawable/search_input"/>
-                    <EditText
-                        android:id="@+id/abonnements_02"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:inputType="numberDecimal"
-                        android:hint="Année 2"
-                        android:background="@drawable/search_input"/>
-                    <EditText
-                        android:id="@+id/abonnements_03"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:inputType="numberDecimal"
-                        android:hint="Année 3"
                         android:background="@drawable/search_input"/>
                 </LinearLayout>
+                <TextView
+                    android:id="@+id/total_03"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:inputType="numberDecimal"
+                    android:textSize="18sp"
+                    android:textAlignment="center"
 
+                    android:background="@drawable/search_input"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -193,42 +215,41 @@
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     android:textSize="18sp"
-                    android:text="Carburant, transports"/>
+                    android:text="Mois 4"/>
 
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/jours_04"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:inputType="numberDecimal"
+                        android:background="@drawable/search_input"/>
+                    <EditText
+                        android:id="@+id/affaires_04"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:inputType="numberDecimal"
 
-                    <EditText
-                        android:id="@+id/transports_01"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:inputType="numberDecimal"
-                        android:hint="Année 1"
-                        android:background="@drawable/search_input"/>
-                    <EditText
-                        android:id="@+id/transports_02"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:inputType="numberDecimal"
-                        android:hint="Année 2"
-                        android:background="@drawable/search_input"/>
-                    <EditText
-                        android:id="@+id/transports_03"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:inputType="numberDecimal"
-                        android:hint="Année 3"
                         android:background="@drawable/search_input"/>
                 </LinearLayout>
+                <TextView
+                    android:id="@+id/total_04"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:inputType="numberDecimal"
+                    android:textSize="18sp"
+                    android:textAlignment="center"
 
+                    android:background="@drawable/search_input"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -241,42 +262,41 @@
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     android:textSize="18sp"
-                    android:text="Frais de déplacement et hébergement"/>
+                    android:text="Mois 5"/>
 
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/jours_05"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:inputType="numberDecimal"
+                        android:background="@drawable/search_input"/>
+                    <EditText
+                        android:id="@+id/affaires_05"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:inputType="numberDecimal"
 
-                    <EditText
-                        android:id="@+id/deplacement_01"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:inputType="numberDecimal"
-                        android:hint="Année 1"
-                        android:background="@drawable/search_input"/>
-                    <EditText
-                        android:id="@+id/deplacement_02"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:inputType="numberDecimal"
-                        android:hint="Année 2"
-                        android:background="@drawable/search_input"/>
-                    <EditText
-                        android:id="@+id/deplacement_03"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:inputType="numberDecimal"
-                        android:hint="Année 3"
                         android:background="@drawable/search_input"/>
                 </LinearLayout>
+                <TextView
+                    android:id="@+id/total_05"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:inputType="numberDecimal"
+                    android:textSize="18sp"
+                    android:textAlignment="center"
 
+                    android:background="@drawable/search_input"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -289,42 +309,41 @@
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     android:textSize="18sp"
-                    android:text="Eau, électricité, gaz"/>
+                    android:text="Mois 6"/>
 
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/jours_06"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:inputType="numberDecimal"
+                        android:background="@drawable/search_input"/>
+                    <EditText
+                        android:id="@+id/affaires_06"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:inputType="numberDecimal"
 
-                    <EditText
-                        android:id="@+id/eau_01"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:inputType="numberDecimal"
-                        android:hint="Année 1"
-                        android:background="@drawable/search_input"/>
-                    <EditText
-                        android:id="@+id/eau_02"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:inputType="numberDecimal"
-                        android:hint="Année 2"
-                        android:background="@drawable/search_input"/>
-                    <EditText
-                        android:id="@+id/eau_03"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:inputType="numberDecimal"
-                        android:hint="Année 3"
                         android:background="@drawable/search_input"/>
                 </LinearLayout>
+                <TextView
+                    android:id="@+id/total_06"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:inputType="numberDecimal"
+                    android:textSize="18sp"
+                    android:textAlignment="center"
 
+                    android:background="@drawable/search_input"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -337,42 +356,41 @@
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     android:textSize="18sp"
-                    android:text="Mutuelle"/>
+                    android:text="Mois 7"/>
 
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/jours_07"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:inputType="numberDecimal"
+                        android:background="@drawable/search_input"/>
+                    <EditText
+                        android:id="@+id/affaires_07"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:inputType="numberDecimal"
 
-                    <EditText
-                        android:id="@+id/mutuelle_01"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:inputType="numberDecimal"
-                        android:hint="Année 1"
-                        android:background="@drawable/search_input"/>
-                    <EditText
-                        android:id="@+id/mutuelle_02"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:inputType="numberDecimal"
-                        android:hint="Année 2"
-                        android:background="@drawable/search_input"/>
-                    <EditText
-                        android:id="@+id/mutuelle_03"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:inputType="numberDecimal"
-                        android:hint="Année 3"
                         android:background="@drawable/search_input"/>
                 </LinearLayout>
+                <TextView
+                    android:id="@+id/total_07"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:inputType="numberDecimal"
+                    android:textSize="18sp"
+                    android:textAlignment="center"
 
+                    android:background="@drawable/search_input"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -385,42 +403,41 @@
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     android:textSize="18sp"
-                    android:text="Fournitures diverses"/>
+                    android:text="Mois 8"/>
 
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/jours_08"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:inputType="numberDecimal"
+                        android:background="@drawable/search_input"/>
+                    <EditText
+                        android:id="@+id/affaires_08"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:inputType="numberDecimal"
 
-                    <EditText
-                        android:id="@+id/fournitures_01"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:inputType="numberDecimal"
-                        android:hint="Année 1"
-                        android:background="@drawable/search_input"/>
-                    <EditText
-                        android:id="@+id/fournitures_02"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:inputType="numberDecimal"
-                        android:hint="Année 2"
-                        android:background="@drawable/search_input"/>
-                    <EditText
-                        android:id="@+id/fournitures_03"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:inputType="numberDecimal"
-                        android:hint="Année 3"
                         android:background="@drawable/search_input"/>
                 </LinearLayout>
+                <TextView
+                    android:id="@+id/total_08"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:inputType="numberDecimal"
+                    android:textSize="18sp"
+                    android:textAlignment="center"
 
+                    android:background="@drawable/search_input"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -433,42 +450,41 @@
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     android:textSize="18sp"
-                    android:text="Entretien matériel et vêtements"/>
+                    android:text="Mois 9"/>
 
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/jours_09"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:inputType="numberDecimal"
+                        android:background="@drawable/search_input"/>
+                    <EditText
+                        android:id="@+id/affaires_09"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:inputType="numberDecimal"
 
-                    <EditText
-                        android:id="@+id/entretien_01"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:inputType="numberDecimal"
-                        android:hint="Année 1"
-                        android:background="@drawable/search_input"/>
-                    <EditText
-                        android:id="@+id/entretien_02"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:inputType="numberDecimal"
-                        android:hint="Année 2"
-                        android:background="@drawable/search_input"/>
-                    <EditText
-                        android:id="@+id/entretien_03"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:inputType="numberDecimal"
-                        android:hint="Année 3"
                         android:background="@drawable/search_input"/>
                 </LinearLayout>
+                <TextView
+                    android:id="@+id/total_09"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:inputType="numberDecimal"
+                    android:textSize="18sp"
+                    android:textAlignment="center"
 
+                    android:background="@drawable/search_input"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -481,42 +497,41 @@
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     android:textSize="18sp"
-                    android:text="Nettoyage des locaux"/>
+                    android:text="Mois 10"/>
 
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/jours_010"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:inputType="numberDecimal"
+                        android:background="@drawable/search_input"/>
+                    <EditText
+                        android:id="@+id/affaires_010"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:inputType="numberDecimal"
 
-                    <EditText
-                        android:id="@+id/nettoyage_01"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:inputType="numberDecimal"
-                        android:hint="Année 1"
-                        android:background="@drawable/search_input"/>
-                    <EditText
-                        android:id="@+id/nettoyage_02"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:inputType="numberDecimal"
-                        android:hint="Année 2"
-                        android:background="@drawable/search_input"/>
-                    <EditText
-                        android:id="@+id/nettoyage_03"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:inputType="numberDecimal"
-                        android:hint="Année 3"
                         android:background="@drawable/search_input"/>
                 </LinearLayout>
+                <TextView
+                    android:id="@+id/total_010"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:inputType="numberDecimal"
+                    android:textSize="18sp"
+                    android:textAlignment="center"
 
+                    android:background="@drawable/search_input"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -529,42 +544,41 @@
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     android:textSize="18sp"
-                    android:text="Budget publicité et communication"/>
+                    android:text="Mois 11"/>
 
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/jours_011"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:inputType="numberDecimal"
+                        android:background="@drawable/search_input"/>
+                    <EditText
+                        android:id="@+id/affaires_011"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:inputType="numberDecimal"
 
-                    <EditText
-                        android:id="@+id/publicite_01"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:inputType="numberDecimal"
-                        android:hint="Année 1"
-                        android:background="@drawable/search_input"/>
-                    <EditText
-                        android:id="@+id/publicite_02"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:inputType="numberDecimal"
-                        android:hint="Année 2"
-                        android:background="@drawable/search_input"/>
-                    <EditText
-                        android:id="@+id/publicite_03"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:inputType="numberDecimal"
-                        android:hint="Année 3"
                         android:background="@drawable/search_input"/>
                 </LinearLayout>
+                <TextView
+                    android:id="@+id/total_011"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:inputType="numberDecimal"
+                    android:textSize="18sp"
+                    android:textAlignment="center"
 
+                    android:background="@drawable/search_input"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -577,187 +591,43 @@
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     android:textSize="18sp"
-                    android:text="Loyer et charges locatives"/>
+                    android:text="Mois 12"/>
 
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/jours_012"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:inputType="numberDecimal"
+                        android:background="@drawable/search_input"/>
+                    <EditText
+                        android:id="@+id/affaires_012"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:inputType="numberDecimal"
 
-                    <EditText
-                        android:id="@+id/loyer_01"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:inputType="numberDecimal"
-                        android:hint="Année 1"
-                        android:background="@drawable/search_input"/>
-                    <EditText
-                        android:id="@+id/loyer_02"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:inputType="numberDecimal"
-                        android:hint="Année 2"
-                        android:background="@drawable/search_input"/>
-                    <EditText
-                        android:id="@+id/loyer_03"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:inputType="numberDecimal"
-                        android:hint="Année 3"
                         android:background="@drawable/search_input"/>
                 </LinearLayout>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginBottom="10dp">
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"
-                    android:textSize="18sp"
-                    android:text="Expert comptable, avocats"/>
-
-
-                <LinearLayout
+                    android:id="@+id/total_012"
+                    android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <EditText
-                        android:id="@+id/comptable_01"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:inputType="numberDecimal"
-                        android:hint="Année 1"
-                        android:background="@drawable/search_input"/>
-                    <EditText
-                        android:id="@+id/comptable_02"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:inputType="numberDecimal"
-                        android:hint="Année 2"
-                        android:background="@drawable/search_input"/>
-                    <EditText
-                        android:id="@+id/comptable_03"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:inputType="numberDecimal"
-                        android:hint="Année 3"
-                        android:background="@drawable/search_input"/>
-                </LinearLayout>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginBottom="10dp">
-                <TextView
-                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"
+                    android:layout_marginHorizontal="5dp"
+                    android:inputType="numberDecimal"
                     android:textSize="18sp"
-                    android:text="Frais bancaires et terminal carte bleue"/>
+                    android:textAlignment="center"
 
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <EditText
-                        android:id="@+id/bancaires_01"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:inputType="numberDecimal"
-                        android:hint="Année 1"
-                        android:background="@drawable/search_input"/>
-                    <EditText
-                        android:id="@+id/bancaires_02"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:inputType="numberDecimal"
-                        android:hint="Année 2"
-                        android:background="@drawable/search_input"/>
-                    <EditText
-                        android:id="@+id/bancaires_03"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:inputType="numberDecimal"
-                        android:hint="Année 3"
-                        android:background="@drawable/search_input"/>
-                </LinearLayout>
-
+                    android:background="@drawable/search_input"/>
             </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginBottom="10dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"
-                    android:textSize="18sp"
-                    android:text="Taxes, CFE"/>
 
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <EditText
-                        android:id="@+id/taxes_01"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:inputType="numberDecimal"
-                        android:hint="Année 1"
-                        android:background="@drawable/search_input"/>
-                    <EditText
-                        android:id="@+id/taxes_02"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:inputType="numberDecimal"
-                        android:hint="Année 2"
-                        android:background="@drawable/search_input"/>
-                    <EditText
-                        android:id="@+id/taxes_03"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:inputType="numberDecimal"
-                        android:hint="Année 3"
-                        android:background="@drawable/search_input"/>
-                </LinearLayout>
-
-            </LinearLayout>
 
 
             <LinearLayout
@@ -774,41 +644,68 @@
                     android:textSize="18sp"
                     android:text="TOTAL"/>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
 
                     <TextView
-                        android:id="@+id/total_01"
+                        android:id="@+id/total"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
                         android:inputType="numberDecimal"
-                        android:hint="Année 1"
-                        android:textSize="18sp"
                         android:background="@drawable/search_input"/>
-                    <TextView
-                        android:id="@+id/total_02"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:inputType="numberDecimal"
-                        android:hint="Année 2"
-                        android:textSize="18sp"
-                        android:background="@drawable/search_input"/>
-                    <TextView
-                        android:id="@+id/total_03"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
-                        android:inputType="numberDecimal"
-                        android:hint="Année 3"
-                        android:textSize="18sp"
-                        android:background="@drawable/search_input"/>
-                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:text="Pourcentage d'augmentation du chiffre d'affaire entre l'année 1 et l'année 2"/>
+
+
+                <EditText
+                    android:id="@+id/pourcentage_01"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/search_input"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:text="Pourcentage d'augmentation du chiffre d'affaire entre l'année 2 et l'année 3"/>
+
+
+                <EditText
+                    android:id="@+id/pourcentage_02"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/search_input"/>
+
             </LinearLayout>
 
             <Button

@@ -66,7 +66,7 @@ class ThirdFragment : Fragment() {
         totalExpenses = 0.0
         for(input in inputGroup.values){
             if(input.text.isEmpty()) {
-                continue;
+                continue
             }
 
             totalExpenses += input.text.toString().toDouble()

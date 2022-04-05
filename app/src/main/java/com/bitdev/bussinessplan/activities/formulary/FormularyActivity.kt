@@ -44,4 +44,8 @@ class FormularyActivity : AppCompatActivity() {
 
         Log.d("BITDEBUG","$key: $value" )
     }
+
+    fun getBusinessType(): String? {
+        return businessData["type"]
+    }
 }

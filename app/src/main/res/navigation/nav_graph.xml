@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/FourthFragment">
 
     <fragment
         android:id="@+id/FirstFragment"
@@ -41,5 +41,22 @@
         android:id="@+id/FourthFragment"
         android:name="com.bitdev.bussinessplan.activities.formulary.FourthFragment"
         android:label="fragment_fourth"
-        tools:layout="@layout/fragment_fourth" />
+        tools:layout="@layout/fragment_fourth" >
+        <action
+            android:id="@+id/action_FourthFragment_to_fifthMarchandiseFragment"
+            app:destination="@id/fifthMarchandiseFragment" />
+        <action
+            android:id="@+id/action_FourthFragment_to_fifthServicesFragment"
+            app:destination="@id/fifthServicesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fifthMarchandiseFragment"
+        android:name="com.bitdev.bussinessplan.activities.formulary.FifthMarchandiseFragment"
+        android:label="FifthMarchandiseFragment" />
+
+        <fragment
+            android:id="@+id/fifthServicesFragment"
+            android:name="com.bitdev.bussinessplan.activities.formulary.FifthServicesFragment"
+            android:label="FifthServicesFragment" />
+
 </navigation>
