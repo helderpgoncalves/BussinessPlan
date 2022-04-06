@@ -52,11 +52,24 @@
     <fragment
         android:id="@+id/fifthMarchandiseFragment"
         android:name="com.bitdev.bussinessplan.activities.formulary.FifthMarchandiseFragment"
-        android:label="FifthMarchandiseFragment" />
+        android:label="FifthMarchandiseFragment" >
+        <action
+            android:id="@+id/action_fifthMarchandiseFragment_to_sixthFragment"
+            app:destination="@id/sixthFragment" />
+    </fragment>
 
         <fragment
             android:id="@+id/fifthServicesFragment"
             android:name="com.bitdev.bussinessplan.activities.formulary.FifthServicesFragment"
-            android:label="FifthServicesFragment" />
+            android:label="FifthServicesFragment" >
+            <action
+                android:id="@+id/action_fifthServicesFragment_to_sixthFragment"
+                app:destination="@id/sixthFragment" />
+        </fragment>
+    <fragment
+        android:id="@+id/sixthFragment"
+        android:name="com.bitdev.bussinessplan.activities.formulary.SixthFragment"
+        android:label="fragment_sixth"
+        tools:layout="@layout/fragment_sixth" />
 
 </navigation>

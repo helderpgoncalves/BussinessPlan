@@ -52,7 +52,10 @@ class MainActivity : AppCompatActivity() {
         super.onResume()
 
         userID = Constants.getPreferenceUserID(applicationContext)
-
+        if(userID == null){
+            gotoLoginActivity()
+            return
+        }
         welcomeTextView.text = "Hi $userID!"
 
 

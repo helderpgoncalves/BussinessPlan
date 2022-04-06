@@ -4,4 +4,9 @@
         <item>Marchandises</item>
         <item>Services</item>
     </string-array>
+
+    <string-array name="ouiNon">
+        <item>Oui</item>
+        <item>Non</item>
+    </string-array>
 </resources>

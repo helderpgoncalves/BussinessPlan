@@ -53,6 +53,8 @@ class FifthServicesFragment : Fragment() {
         inputGroup["jours_010"] = binding.jours010
         inputGroup["jours_011"] = binding.jours011
         inputGroup["jours_012"] = binding.jours012
+        inputGroup["pourcentage_01"] = binding.pourcentage01
+        inputGroup["pourcentage_02"] = binding.pourcentage02
 
         update()
 
@@ -68,7 +70,17 @@ class FifthServicesFragment : Fragment() {
     }
 
     private fun update() {
+        var total = 0.0
 
+        for(i in 1..12){
+            val jours = inputGroup["jours_0$i"] ?: continue
+
+            if(jours.text.toString() == "") continue
+
+            total += jours.text.toString().toDouble()
+        }
+
+        binding.total.text = total.toString()
     }
 
     private fun nextPage() {
@@ -78,6 +90,6 @@ class FifthServicesFragment : Fragment() {
             parent.setData(input.key, input.value.text.toString())
         }
 
-        findNavController().navigate(R.id.action_ThirdFragment_to_FourthFragment)
+        findNavController().navigate(R.id.action_fifthServicesFragment_to_sixthFragment)
     }
 }

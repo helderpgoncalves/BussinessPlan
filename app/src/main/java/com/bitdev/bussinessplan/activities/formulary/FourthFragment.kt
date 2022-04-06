@@ -148,9 +148,12 @@ class FourthFragment : Fragment() {
         }
 
         if(parent.getBusinessType() == "Services"){
+
             findNavController().navigate(R.id.action_FourthFragment_to_fifthServicesFragment)
         }else{
-            findNavController().navigate(R.id.action_FourthFragment_to_fifthMarchandiseFragment)
+           //findNavController().navigate(R.id.action_FourthFragment_to_fifthMarchandiseFragment)
+            findNavController().navigate(R.id.action_FourthFragment_to_fifthServicesFragment)
+
         }
     }
 }

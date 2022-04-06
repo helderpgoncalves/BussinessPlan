@@ -59,8 +59,8 @@ class LoginActivity : AppCompatActivity() {
 
                     for(document in documents){
                         if(document.data["password"].toString() == password.toString()){
-                            Constants.setPreferenceUserID(username.toString(), applicationContext)
-
+                            Constants.setPreferenceUsername(username.toString(), applicationContext)
+                            Constants.setPreferenceUserID(document.id,applicationContext)
                             finish()
                             return@addOnSuccessListener
                         }

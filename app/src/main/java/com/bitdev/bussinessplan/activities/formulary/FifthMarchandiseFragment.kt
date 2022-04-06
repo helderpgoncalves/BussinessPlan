@@ -125,6 +125,6 @@ class FifthMarchandiseFragment : Fragment() {
             parent.setData(input.key,input.value.text.toString())
         }
 
-        findNavController().navigate(R.id.action_ThirdFragment_to_FourthFragment)
+        findNavController().navigate(R.id.action_fifthMarchandiseFragment_to_sixthFragment)
     }
 }

@@ -397,8 +397,7 @@
 
                     <TextView
                         android:id="@+id/total"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
                         android:inputType="numberDecimal"
@@ -423,8 +422,7 @@
 
                 <EditText
                     android:id="@+id/pourcentage_01"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="5dp"
                     android:inputType="numberDecimal"
@@ -449,8 +447,7 @@
 
                 <EditText
                     android:id="@+id/pourcentage_02"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="5dp"
                     android:inputType="numberDecimal"
